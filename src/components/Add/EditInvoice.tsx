@@ -139,7 +139,6 @@ export default function EditInvoice() {
 			}
 		}
 		if (buttonType === "edit") {
-			console.log(data);
 			try {
 				const response = await fetch(
 					`https://invoice-project-team-5.onrender.com/api/invoice/${id}`,
@@ -174,17 +173,15 @@ export default function EditInvoice() {
 
 	useEffect(() => {
 		if (showAddInvoice) {
-			console.log("Shemovida");
-
 			handleAddNewItem();
 		}
 	}, [showAddInvoice]);
 	const handleAddNewItem = () => {
 		reset({
-			createdAt: "", // Add default date here if needed
-			paymentDue: "", // Add default paymentDue here if needed
-			description: "", // Add default description here if needed
-			paymentTerms: 0, // Add default paymentTerms here if needed
+			createdAt: "",
+			paymentDue: "",
+			description: "",
+			paymentTerms: 0,
 			clientName: "",
 			clientEmail: "",
 			status: {

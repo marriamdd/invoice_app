@@ -81,16 +81,9 @@ html {
 .react-datepicker__day {
 	@apply dark:text-white;
 }
-/* .react-datepicker__day--today {
-	all: unset;
-	background-color: transparent !important;
-	color: inherit !important;
-	font-weight: normal !important;
-	font-size: 30px;
-} */
 
 .error input {
-	background-color: #ffcccc; /* Change to your desired red color */
+	background-color: #ffcccc;
 }
 
 @layer utilities {

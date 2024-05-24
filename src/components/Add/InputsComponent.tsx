@@ -1,8 +1,6 @@
 import React from "react";
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
-// import { IInvoices } from "../../App";
-
 interface CustomInputProps {
 	id1: string;
 	defaultValue1: string;

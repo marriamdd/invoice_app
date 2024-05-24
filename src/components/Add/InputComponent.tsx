@@ -36,7 +36,6 @@ const CustomInput: React.FC<CustomInputProps> = ({
 				)}
 			</div>
 			<input
-				// style={{ opacity: 0.5 }}
 				className={`cursor-pointer ${optimalError && "border-[1px] border-solid border-[red]"}  w-full h-[48px] flex-shrink-0 rounded-md border-[1px] border-solid border-[#DFE3FA] bg-white text-custom-color font-league-spartan text-[13px] font-bold leading-4 tracking-tight pl-3 dark:bg-[#1E2139] dark:text-white dark:border-none`}
 				id={id}
 				defaultValue={defaultValue || ""}
