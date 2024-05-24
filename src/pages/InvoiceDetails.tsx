@@ -27,7 +27,7 @@ const useIsMobile = () => {
 export default function InvoiceDetails() {
 	const [choosenInvoice, setChoosenInvoice] = useState<IInvoices | null>(null);
 	const { id } = useParams();
-	const { showEditInvoice } = useContext(InvoiceContext);
+	const { showEditInvoice, showAddInvoice } = useContext(InvoiceContext);
 	const isMobile = useIsMobile();
 
 	const navigate = useNavigate();
@@ -51,6 +51,9 @@ export default function InvoiceDetails() {
 	}, [id]);
 
 	if (showEditInvoice && isMobile) {
+		return null;
+	}
+	if (showAddInvoice && isMobile) {
 		return null;
 	}
 

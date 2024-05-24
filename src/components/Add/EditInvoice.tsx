@@ -252,10 +252,16 @@ export default function EditInvoice() {
 	if (isLoading) return <Loading />;
 
 	return (
-		<div>
+		<div
+			className={`${showAddInvoice && "sm:absolute sm:top-[60px] md:static sm:h-screen "}`}
+		>
 			<div
-				className="flex mt-[25px] items-center gap-[23px] xl:cursor-pointer  md:hidden"
-				onClick={() => setShowEditInvoice(false)}
+				className="flex sm:px-30 mt-[25px]  items-center gap-[23px] xl:cursor-pointer  md:hidden"
+				onClick={() => {
+					setShowEditInvoice(false);
+					setShowAddInvoice(false);
+				}}
+				style={{ paddingInline: "30px" }}
 			>
 				<img src="/assets/icon-arrow-left.svg" alt="go back" />
 				<span className="font-bold text-[15px] leading-[15px] tracking-[-0.25px] text-[#0C0E16] dark:text-[#FFFFFF] xl:hover:text-[#7E88C3]">
@@ -267,7 +273,7 @@ export default function EditInvoice() {
 					setShowEditInvoice(false);
 					setShowAddInvoice(false);
 				}}
-				className=" sm:flex-none  md:w-full md:right-0 md:top-0 md:left-0 md:h-[100vh] bg-[#000]  md:fixed  opacity-[0.4984]"
+				className=" sm:flex-none  md:w-full md:right-0 md:top-0 md:left-0 md:h-screen   bg-[#000]  md:fixed  opacity-[0.4984]"
 			></div>
 
 			<form
